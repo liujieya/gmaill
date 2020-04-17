@@ -1,0 +1,14 @@
+#配置中心文件
+
+
+spring:
+  application:
+    name: pms-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.30.176:8848
+        namespace: c5e45710-471d-4db3-9778-f1262b6fb6be
+        group: dev
+        #指定该文件为yml文件
+        file-extension: yml
