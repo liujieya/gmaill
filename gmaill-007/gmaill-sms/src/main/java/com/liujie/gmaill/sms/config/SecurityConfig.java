@@ -1,0 +1,19 @@
+package com.liujie.gmaill.sms.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+
+/**
+ * @author: LiuJ
+ * @Date: 2020/4/17
+ * @Description:
+ */
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().anyRequest().permitAll().and().logout().permitAll();//配置不需要登录验证
+
+    }
+}
